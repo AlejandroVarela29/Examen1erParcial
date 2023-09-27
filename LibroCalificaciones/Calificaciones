@@ -1,1 +1,84 @@
+import java.util.Scanner;
+
+public class LibroCalificaciones1{
+
+    public static void main(String[] args) {
+        Scanner calificaciones = new Scanner(System.in);
+
+        System.out.println("Cuál es la cantidad de estudiantes a digitar");
+        int cantidadDeEstudiantes = calificaciones.nextInt();
+
+        String nombre[] = new String[cantidadDeEstudiantes];
+        int nota[] = new int[cantidadDeEstudiantes];
+
+        for (int i = 0; i < cantidadDeEstudiantes; i++) {
+            System.out.println("Cuál es la nota del estudiante " + (i + 1) + ": ");
+            nota[i] = calificaciones.nextInt();
+        }
+
+        int reprobado = 0;
+        int regular = 0;
+        int muyBueno = 0;
+        int bueno = 0;
+        int excelente = 0;
+
+        for (int i = 0; i <cantidadDeEstudiantes; i++) {
+            System.out.println("El número del estudiante es " + (i + 1) + ". La nota del estudiante es " + nota[i]);
+
+            if (nota[i] >= 0 && nota[i] <= 59) {
+             //   System.out.println("El estudiante " + (i + 1) + " está reprobado con una nota de " + nota[i]);
+                reprobado++;
+            } else if (nota[i] >= 60 && nota[i] <= 69) {
+           //     System.out.println("El estudiante " + (i + 1) + " pasó con una nota regular con una nota de " + nota[i]);
+                regular++;
+            } else if (nota[i] >= 70 && nota[i] <= 79) {
+        //        System.out.println("El estudiante " + (i + 1) + " pasó con una nota buena con una nota de " + nota[i]);
+                bueno++;
+            } else if (nota[i] >= 80 && nota[i] <= 89) {
+        //        System.out.println("El estudiante " + (i + 1) + " pasó con una nota muy buena con una nota de " + nota[i]);
+                muyBueno++;
+            } else if (nota[i] >= 90 && nota[i] <= 100) {
+            //    System.out.println("El estudiante " + (i + 1) + " pasó con una nota excelente con una nota de " + nota[i]);
+         //       System.out.println("¡Felicitaciones, eres una máquina!");
+                excelente++;
+            }
+        }
+
+        System.out.print("Total de alumnos reprobados: " + reprobado);
+        for(int x = 0 ; x < reprobado ; x++){
+            System.out.print( " *");
+        }
+        
+        System.out.println("");
+        
+        System.out.print("Total de alumnos regulares: " + regular);
+        for(int x = 0 ; x < regular ; x++){
+            System.out.print( " *");
+        }
+        System.out.println("");
+        
+        System.out.print("Total de alumnos buenos: " + bueno);
+        for(int x = 0 ; x < bueno ; x++){
+            System.out.print( " *");
+        }
+        System.out.println("");
+        
+        System.out.print("Total de alumnos muy buenos: " + muyBueno);
+        for(int x = 0 ; x < muyBueno; x++){
+            System.out.print( " *");
+        }
+        System.out.println("");
+        
+        System.out.print("Total de alumnos excelentes: " + excelente);
+        for(int x = 0 ; x < excelente ; x++){
+            System.out.print( " *");
+        }
+        
+
+      //  for (int i = 0; i < cantidadDeEstudiantes; i++) {
+         //   if (nota[i] >= 60 && nota[i] <= 100) {
+             //   System.out.println("El estudiante " + (i + 1) + " pasó con una nota de: " + nota[i]);
+            }
+        
+    }
 
