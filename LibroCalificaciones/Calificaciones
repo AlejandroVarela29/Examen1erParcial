@@ -44,6 +44,8 @@ public class LibroCalificaciones1{
             }
         }
 
+        System.out.println("El total de alumnos es " + cantidadDeEstudiantes);
+
         System.out.print("Total de alumnos reprobados: " + reprobado);
         for(int x = 0 ; x < reprobado ; x++){
             System.out.print( " *");
